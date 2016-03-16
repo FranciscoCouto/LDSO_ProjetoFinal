@@ -1,0 +1,72 @@
+<html lang="en">
+
+
+
+
+<head>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Fórum | Atsia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/forum/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/static/css/forum/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/forum/main.css">
+    <link rel="stylesheet" href="/static/css/forum/sl-slide.css">
+
+    <script src="/static/js/forum/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+    <script src="/static/js/forum/vendor/jquery-1.9.1.min.js"></script>
+    <script src="/static/js/forum/vendor/bootstrap.min.js"></script>
+    <script src="/static/js/forum/main.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" id ="bootstrap-overrides" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href='/'>Atsia</a>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                <li>
+                <a href='/' style="padding: 1px">
+                    <img  src="/static/img/Logo_ATSIA-01.png" alt="" style="max-height:70px" class=".img-responsive">
+                    </a>
+                </li>
+                    <li>
+                        <a href='/forum/'>Fórum</a>
+                    </li>
+                    <li>
+                        <a href='/forum/areapessoal/'>Área pessoal</a>
+                    </li>
+                    <li>
+                        <a href='/forum/mensagens/'>Minhas Mensagens ({{nr_mensagens}})</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href='/forum/logout/'>Logout</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+    
+    {% include 'top-nav.html' %}
+
+    <style>
+html, body {
+height:100%;
+margin:0;
+padding:0;
+}
+.carousel, .item, .active {
+height:100%;
+}
+.carousel-inner {
+height:100%;
+}
+.carousel {
+margin-bottom: 60px;
+}
+.carousel-caption {
+z-index: 10;
+}
+.carousel .item {
+background-color: #777;
+}
+.carousel .carousel-inner .bg {
+background-repeat:no-repeat;
+background-size:cover;
+}
+.carousel .carousel-inner .bg1 {
+background-image:url(/static/img/atsia1.jpg);
+background-position: center top;
+}
+.carousel .carousel-inner .bg2 {
+background-image:url(/static/img/atsia2.jpg);
+background-position: center center;
+}
+.carousel .carousel-inner .bg3 {
+background-image:url(/static/img/atsia3.jpg);
+background-position: center bottom;
+}
+
+    </style>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="max-height: 65%;width: 80%;margin-left: auto;margin-right: auto;">
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1"></li>
+<li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner">
+<div class="item bg bg1 active">
+<div class="container">
+<div class="carousel-caption">
+<h1>Workshops Para a Comunidade </h1>
+<p style="color:white;font-size: 95%;">Com a ajuda dos nossos parceiros chegamos a populações que sofrem de isolamento social em contexto urbano</p>
+</div>
+</div>
+</div>
+<div class="item bg bg2">
+<div class="container">
+<div class="carousel-caption">
+<h1>Workshops Para Famílias</h1>
+<p style="color:white;font-size: 95%">Desafiamos as famílias a trabalhar em conjunto uma vez por semana, os nossos workshops são para famílias com bebés desde os 4 meses até aos 9 anos.</p>
+</div>
+</div>
+</div>
+<div class="item bg bg3">
+<div class="container">
+<div class="carousel-caption">
+<h1>Workshops de Team Building</h1>
+<p style="color:white;font-size: 95%">A música é uma ferramenta fora de série para criar laços e despertar a criatividade , uma excelente forma para que toda a equipa se conheça melhor e trabalhe em harmonia.</p>
+</div>
+</div>
+</div>
+</div>
+<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+   {% include 'footer.html' %}
+
+</body>
+
+</html>

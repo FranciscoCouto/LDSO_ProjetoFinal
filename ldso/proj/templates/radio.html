@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+{% include 'top-nav.html' %}
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="../static/js/radio/radio.js"></script>  
+<link href="/static/css/radio/radio.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+
+
+<body>
+
+<div class="playa" style="margin-right: 3cm">
+
+<audio id="audio" tabindex="0" type="audio/mpeg" controls preload="auto">
+        <source src="">
+        Sorry, your browser does not support HTML5 audio.
+</audio>
+
+<div class="dropdown">
+
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Escolha a sua Música!
+  <span class="caret"></span></button>
+
+  <ul id="playlist" class="dropdown-menu">
+    {% block content %}
+    {% for Musica in object_list %}
+    <li>
+    <a href="/{{Musica.ficheiro}}" nome="{{Musica.nome}}" desc="{{Musica.descricao}}">{{Musica.nome}}</a></li>
+    {% endfor %}
+    {% endblock %}
+
+  </ul>
+
+</div>
+<br><br><br>
+
+<div class='container2'>
+<div>
+      <img src='http://3.bp.blogspot.com/--0HlCOsPSgE/UvTKH9pvZ2I/AAAAAAAAN5M/c6b_oYP2wfM/s1600/google-music-logo.png' class='iconDetails'>
+    </div>
+    <div style='margin-left:60px;'>
+  <h4 class="current" id="tooltip" title=""></h4>
+  <div style="font-size:.9em;float:left;">Disfrute da música criada nos nossos círculos!</div>
+  </div>
+</div>
+
+<br><br>
+
+</div>
+
+
+
+</body>
+
+{% include 'footer.html' %}
+
+</html>

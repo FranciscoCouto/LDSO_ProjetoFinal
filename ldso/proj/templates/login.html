@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'top-nav.html' %}
+
+
+<div class="container" style="margin-bottom: 200px;max-width: 100%;">
+
+  <div class="row col-md-8 col-md-offset-2 text-center" style="margin-top: 10%">
+    <div class="box">
+
+     <form action="/post_login/" class="form-signin" method="post">
+       {% csrf_token %}
+       {{form.as_p}}
+       <h2 class="form-signin-heading">Log-in</h2>
+       <label for="inputUsername" class="sr-only">Username</label>
+       <input type="text" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+       <label for="inputPassword" class="sr-only">Password</label>
+       <input type="password" name="password" class="form-control" placeholder="Password" required="">
+       <div class="checkbox">
+        {% if erro == 'erro login' %}
+        <p> Erro no Login! </p>
+        {% endif %}
+
+        <label>
+          <input type="checkbox" value="remember-me"> Relembrar-me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Log-in</button>
+    </form>
+
+  </div>
+</div>
+
+</div> 
+<!-- /.container -->
+
+{% include 'footer.html' %}
+</body>
+
+</html>
